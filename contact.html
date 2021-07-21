@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <script src="./validation.js">
+    </script>
 </head>
 <body>
     <div class="nav">
@@ -27,26 +29,33 @@
             <div class="contact-box">
                 <div class="contact-left">
                     <h3>Send your feedback</h3>
-                    <form action="#">
+                    <form name="contactForm" action="#" onsubmit="return validate()">
                         <div class="input-row">
                             <div class="input-group">
                                 <label>Name</label>
-                                <input type="text">
+                                <input type="text" name="name">
                             </div>
+                            
+                        </div>  
+                        <p id="nameError"></p>
+                        <div class="input-row">
                             <div class="input-group">
                                 <label>Phone</label>
-                                <input type="text">
-                            </div>   
-                        </div>
+                                <input type="text" name="phone">
+                            </div> 
+                        </div> 
+                        <p id="phoneError"></p>
                         <div class="input-row">
                             <div class="input-group">
                                 <label>Email</label>
-                                <input type="email">
+                                <input type="email" name="email">
                             </div> 
-                    </div>
-                    <label>Feedback</label>
-                    <textarea rows="5" placeholder="Your Feedback"></textarea>
-                    <button type="submit">SEND</button>
+                        </div>
+                        <p id="emailError"></p>
+                        <label>Feedback</label>
+                        <textarea rows="5" placeholder="Your Feedback" name="feedback"></textarea>
+                        <p id="textareaError"></p>
+                        <button type="submit">SEND</button>
                     </form>
                 </div>
                 <div class="contact-right">
