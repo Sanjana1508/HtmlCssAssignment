@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Admin</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./footerstyle.css">
+    <link rel="stylesheet" href="./galleryAdmin.css">
+    <script src="./imageValidation.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="./index.html">Home</a>
+            <a href="./aboutme.html">About Me</a>
+            <a href="./contact.html">Contact Me</a>
+            <a href="./gallery.html">My Gallery</a>
+            <a class="active" href="#">Gallery Admin</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Gallery Admin</h1>
+            <div class="admin-box">
+                <div class="add">
+                    <h3>Add an image</h3>
+                    <form name="addImageForm" action="#" onsubmit="return validateAddImage()">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Image URL</label>
+                                <input type="text" name="addUrl">
+                            </div> 
+                        </div>  
+                        <p id="urlAddError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text" name="addName">
+                            </div> 
+                        </div> 
+                        <p id="nameAddError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Information</label>
+                                <input type="email" name="addInfo">
+                            </div> 
+                        </div>
+                        <p id="infoAddError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Uploaded Date</label>
+                                <input type="date" name="addDate">
+                            </div>
+                        </div>
+                        <p id="dateAddError"></p>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+                <div class="update">
+                    <h3>Update an image</h3>
+                    <form name="updateImageForm" action="#" onsubmit="return validateUpdateImage()">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Image Id</label>
+                                <input type="number" name="updateId">
+                            </div> 
+                        </div>
+                        <p id="IdUpdateError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Image URL</label>
+                                <input type="text" name="updateUrl">
+                            </div> 
+                        </div>  
+                        <p id="urlUpdateError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text" name="updateName">
+                            </div> 
+                        </div> 
+                        <p id="nameUpdateError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Information</label>
+                                <input type="email" name="updateInfo">
+                            </div> 
+                        </div>
+                        <p id="infoUpdateError"></p>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Uploaded Date</label>
+                                <input type="date" name="updateDate">
+                            </div>
+                        </div>
+                        <p id="dateUpdateError"></p>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+                <div class="remove">
+                    <h3>Remove an image</h3>
+                    <form name="removeImageForm" action="#" onsubmit="return validateremoveImage()">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Image Id</label>
+                                <input type="number" name="removeId">
+                            </div> 
+                        </div>
+                        <p id="idRemoveError"></p>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

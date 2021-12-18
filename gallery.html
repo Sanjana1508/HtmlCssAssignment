@@ -10,23 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./footerstyle.css">
     <link rel="stylesheet" href="./gallerystyle.css">
-    <script>
-        (function($){
-            $(function(){
-               fetch('gallery.json').then(response => response.json()).then(data=>{
-                target = $('#img-gallery'),
-            $.each(data, function (key, val) {
-            html = '<div class="gallery">';
-            html += '<img src ="' + val.src + '/>';
-            html += '<p class="desc">' + val.alt + '</p>';
-            html += '</div>';
-            target.append(html);
-        });
-               });
-            })
-        }(jQuery))
+    <script src="./loadGallery.js">
     </script>
-        
 </head>
 <body>
     <header>
@@ -35,6 +20,7 @@
             <a href="./aboutme.html">About Me</a>
             <a href="./contact.html">Contact Me</a>
             <a class="active" href="#">My Gallery</a>
+            <a href="./galleryAdmin.html">Gallery Admin</a>
         </div>
     </header>
    
